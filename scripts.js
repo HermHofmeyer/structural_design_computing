@@ -443,12 +443,274 @@ document.addEventListener("DOMContentLoaded", function() {
             title={Automatic Load Definition for Orthogonal Spatial and Structural Design},
             author={Hofmeyer, Herm},
             year={2011},
-            abstract={Recently, the idea of a research engine has been developed, in which a spatial design is transformed into a structural design and vice versa by means of a cyclic procedure. Within this engine, a finite element model is applied that uses structural loads on the structural design that are derived from surface loads acting on the spatial design, such as wind loads, gravity loads, etc. This paper presents a method for the derivation of these structural loads from surface loads. The method is based on 1) finding the loaded surfaces among all surfaces of the spatial design; 2) selecting the structural elements that belong to the loaded surfaces; and 3) distributing the load among these structural elements. The new method functions correctly and will be combined with a recently developed procedure for stabilizing kinematically unstable structural systems to finish the research engine's spatial-structural transformation part.
-1},
+            abstract={Recently, the idea of a research engine has been developed, in which a spatial design is transformed into a structural design and vice versa by means of a cyclic procedure. Within this engine, a finite element model is applied that uses structural loads on the structural design that are derived from surface loads acting on the spatial design, such as wind loads, gravity loads, etc. This paper presents a method for the derivation of these structural loads from surface loads. The method is based on 1) finding the loaded surfaces among all surfaces of the spatial design; 2) selecting the structural elements that belong to the loaded surfaces; and 3) distributing the load among these structural elements. The new method functions correctly and will be combined with a recently developed procedure for stabilizing kinematically unstable structural systems to finish the research engine's spatial-structural transformation part.},
+			note={EG-ICE, Enschede, The Netherlands},
             link={https://research.tue.nl/en/publications/automatic-load-definition-for-orthogonal-spatial-and-structural-d}
         }
 		
+		@inproceedings{davila2011con,
+            title={Automated Generation of Structural Solutions based on Spatial Designs to serve as a Support Tool in early Stages of the Design Process},
+            author={Davila Delgado, Juan and Hofmeyer, Herm and Kerstens, Jan},
+            year={2011},
+            abstract={Design processes are sets of complex, iterative and multidisciplinary procedures applied to achieve particular solutions. To aid in the understanding of design processes and to support the involved actors, a "Research Engine" (RE) is being developed. The RE is a set of computational processes which work together, in a cyclic manner, to simulate the interaction between spatial design instances and structural solutions within a design process. This paper presents the first developed phase of the RE; in which the Spatial Design is transformed into a Structural Solution. In other words, given an orthogonal geometry (Spatial Design) this process generates a structure, performs a structural analysis and, consequently, provides an indication of its structural behavior. In early stages of the design process, this phase of the RE could help designers to (1) devise different structural solutions for a given spatial design; (2) obtain an indication of the spatial consequences of the structural solution; and (3) predict the structural behavior of the generated solution. Examples illustrate the process in practice during this first phase of the RE, and also show its capabilities in assisting in the integration between spatial and structural considerations within the design process.},
+			note={CONVR, Weimar, Germany},
+            link={https://research.tue.nl/en/publications/automated-generation-of-structural-solutions-based-on-spatial-des}
+        }
+		
+		@inproceedings{davila2012con,
+            title={Fundaments for Developing an Automated Structural Optimization Tool based on Strain Energy},
+            author={Davila Delgado, Juan and Hofmeyer, Herm},
+            year={2012},
+            abstract={Design processes are sets of complex, iterative, and multidisciplinary procedures applied to achieve particular solutions. To aid in the understanding of design processes and to support the involved actors, a “Research Engine” (RE) is being developed. The RE is a set of computational processes which work together, in a cyclic manner, to simulate the interaction between spatial design instances and structural solutions within a design process. This paper demonstrates how the RE can generate different structural solutions from a single spatial design and produces relevant information about their structural behavior. This information is then used to (1) lower the total amount of strain energy in a structure and (2) achieve a more homogeneous distribution of strain energy among the structural elements. A set of case studies are presented that have been optimized manually and the findings of these optimizations will be used to suggest underlying principles for an automated optimization tool to be developed. Results show that by adding and relocating structural elements to highly strained sections of the structure and by exchanging the type of structural elements (e.g. walls for columns) both of the previously stated objectives can be achieved. As such, these procedures (addition, relocation, and exchange of structural elements) will be put forward as fundamental rules of the upcoming automated optimization tool.},
+			note={ICCCBE, Moscow, Russia},
+            link={https://research.tue.nl/en/publications/fundaments-for-developing-an-automated-structural-optimization-to}
+        }
+				
+		@inproceedings{hofmeyer2012con,
+            title={Spatial-Structural Interaction and Strain Energy Structural Optimisation},
+            author={Hofmeyer, Herm and Davila Delgado, Juan},
+            year={2012},
+            abstract={A research engine iteratively transforms spatial designs into structural designs and vice versa. Furthermore, spatial and structural designs are optimised. It is suggested to optimise a structural design by evaluating the strain energy of its elements and by then removing, adding, or changing the elements accordingly. A single horizontal load on a structural design will not lead to a useable optimised design and at least the effect of four loads should be taken into account simultaneously with the maximum value taken for each element. For a current implementation of the research engine, the optimising strategy above works, however, it will not yield structural designs that lead to modified spatial designs. As this is a necessary condition for the research engine, a modification of the research engine's structural grammars is proposed. This modification is tested and shows intuitively correct results. It remains to be investigated how the modification performs in full, iterative cycles of the research engine.},
+			note={EG-ICE, Munich, Germany},
+            link={https://research.tue.nl/en/publications/spatial-structural-interaction-and-strain-energy-structural-optim}
+        }
+		
+		@inproceedings{hofmeyer2013con,
+            title={Finite Element Deletion and Topology Optimisation for Building Structural Optimisation},
+            author={Hofmeyer, Herm and Davila Delgado, Juan},
+            year={2013},
+            abstract={Buildings would not exist without a structural design. Although mechanical, electrical, and computer facilities now often put a much higher burden on the financial costs of a building than the structural design -related to both engineering and construction costs-, a building structure is unique in the sense that structural issues cannot be permitted, as they are lifethreatening. Thus a building structure should primarily be safe, but nevertheless also economical. To help structural engineers with these goals, computer-assisted methods exist to determine the stress distribution in structural designs (e.g. the finite element method) and to optimise design components (e.g. topology optimisation). However, research on the optimisation of (complete) building structures is still relatively rare. In this paper, two methods for structural design optimisation have been compared for the application to complete building structural designs. This via a so-called research engine, in which spatial designs are transformed in structural designs, and vice versa, to investigate preliminary design processes. The two methods are compared for their effectiveness of optimisation, which shows that the method topology optimisation is more effective than the method element deletion, and if structural optimisation is used for exploring a solution space and evaluating the design process outcomes, this is an important conclusion. Besides, during topology optimisation a structural design remains stable, whereas element deletion may render the design unstable. However, when structural optimisation is used to study the primarily design process (e.g. via the research engine), the qualitative effects of both methods can be compared, and element deletion is computationally more efficient. Because even an unstable design will be usable in the research engine, for this case the method of element deletion is preferred.},
+			note={CIB WBC, Brisbane, Australia},
+            link={https://research.tue.nl/en/publications/finite-element-deletion-and-topology-optimisation-for-building-st}
+        }
+		
+		@inproceedings{davila2013con,
+            title={Research Engine, a Tool to Simulate and Study Spatial-Structural Design Processes},
+            author={Davila Delgado, Juan and Hofmeyer, Herm},
+            year={2013},
+            abstract={The project’s objective is to study spatial-structural design processes and to support the involved actors; to that end a computational tool so-called Research Engine (RE) has been developed. The RE seeks to fulfill four aims: (1) to study the influence of transformations methods on design instances; (2) to study the influence of transformations methods on the behavior of other transformations methods; (3) to aid in finding "best compromised" or interesting spatial and structural design instances; and (4) to serve as design support tool, providing useful information in early stages of the design process. The paper describes the RE framework and its implementation. Case-studies are presented which showcase the RE’s capabilities and demonstrate that it does fulfill the previously stated aims.},
+			note={CAAD Futures, Shanghai, China},
+            link={https://research.tue.nl/en/publications/research-engine-a-tool-to-simulate-and-study-spatial-structural-d}
+        }
+		
+		@inproceedings{davila2013con2,
+            title={Automated Simulation and Study of Spatial-Structural Design Processes},
+            author={Davila Delgado, Juan and Hofmeyer, Herm},
+            year={2013},
+            abstract={A so-called "Design Process Investigation toolbox" (DPI toolbox), has been developed. It is a set of computational tools that simulate spatial-structural design processes. Its objectives are to study spatial-structural design processes and to support the involved actors. Two case-studies are presented which demonstrate how to: (1) study the influence of transformation methods on design instances and (2) study the influence of transformation methods on the behavior of other transformation methods. It was found that in design instances with the same type of structural elements the influence of a specifically varied transformation method is more explicit; while, when different types are present this influence is more undetermined. It was also found that the use of two specifically different structural modification methods have little influence on the sub-sequential spatial transformation method.},
+			note={eCAADe, Delft, The Netherlands},
+            link={https://research.tue.nl/en/publications/automated-simulation-and-study-of-spatial-structural-design-proce}
+        }
+		
+		@inproceedings{hofmeyer2014con,
+            title={3D Topology Optimisation Including a Movable Void},
+            author={Hofmeyer, Herm and Davila Delgado, Juan},
+            year={2014},
+            abstract={To find structure concepts for building spatial designs, structural elements can be added to a spatial design, preferably at the boundaries of the explicitly defined spaces, and these elements can subsequently be optimised via topology optimisation, which is here defined as strategy I. Another strategy (II) is to interpret the total volume of the spatial design as structural mass -so without defined spaces-, and to optimise the distribution of this mass via 3D topology optimisation, most often naturally yielding (open) spaces as well. In this paper, strategy II is extended by including a movable void explicitly. The final aim is to compare strategies I and II, however, some issues exist with movable voids within gradient-based topology optimisation, and future research needs to explore non-gradient based methods first.},
+			note={EG-ICE, Cardiff, United Kingdom},
+            link={https://research.tue.nl/nl/publications/3d-topology-optimisation-including-a-movable-void}
+        }
+		
+		@inproceedings{hofmeyer2014con2,
+            title={Generation of Structure Concepts via 3D Topology Optimisation},
+            author={Hofmeyer, Herm and Davila Delgado, Juan},
+            year={2014},
+            abstract={Topology optimisation has been used for a new application that finds structure concepts for building spatial designs. This by a) transforming a spatial design in a uniform structural mass; b) loading the uniform structural mass with horizontal wind loads on each side and vertical live loads on the floors; and c) finding the most optimal mass distribution for minimum strain energy. A spatial design with square ground plan shows that bending moments, caused by wind loads, direct structural mass to the building outer edges, whereas live loads yield a localised mass distribution over the ground plan, similar to a column grid. This behaviour has been verified for circular ground plans as well. Latter plans indicate that the forming of a column grid is not caused by a discontinuous circumference (i.e. the corners) of a square ground plan. Future research will focus on the possible mechanisms of grid formation.},
+			note={EG-ICE, Cardiff, United Kingdom},
+            link={https://research.tue.nl/nl/publications/generation-of-structure-concepts-via-3d-topology-optimisation}
+        }
+		
+		@inproceedings{davila2014con,
+            title={Optimising Building Structural Topologies},
+            author={Davila Delgado, Juan and Hofmeyer, Herm},
+            year={2014},
+            abstract={A strategy to perform structural optimisation at early stages of the building design process has been developed. It uses a complete building spatial design as input to generate a structural topology. The latter is converted into a building structural design and a corresponding finite element model. After that, topology optimisation is used to generate an optimal finite element model, which shows an optimal distribution of the finite elements’ relative densities. The optimal finite element models can be used to generate several different and possibly better-performing structural topologies. Examples of two variants (A and B) of the strategy are presented. Strategy variant A uses walls as load-bearing architectural elements, whereas strategy variant B uses bricks (solids) to generate a structural topology. Results show that strategy variant A generates optimal relative density distributions that resemble recognizable structural elements. Also, the structural topologies found are in concordance with the initial building spatial design. On the other hand, strategy variant B is only partly influenced by the initial building spatial design and the resulting optimal relative densities distributions are mainly determined by the prescribed constraints and loads.},
+			note={OPT-i, Kos, Greece},
+            link={https://research.tue.nl/nl/publications/optimising-building-structural-topologies}
+        }
+		
+		@inproceedings{boonstra2015con,
+            title={Generation of a Hierarchic Structure via 3D-Topology Optimisation Using Black and White Filtering},
+            author={Boonstra, Sjonnie and Hofmeyer, Herm},
+            year={2015},
+            abstract={Commonly used building structures often show a hierarchic layout of structural elements. It can be questioned whether such a layout originates from practical considerations, e.g. related to its construction, or that it is (relatively) optimal from a structural point of view. This paper investigates this question by using topology optimisation in an attempt to generate a commonly used timber floor. The optimisation is conducted using 3D-volume elements so the topology can differentiate over the height, making a hierarchic layout at least possible. First results show indeed a hierarchic layout, however the floor surface is non-continuous, due to low density areas, reducing its practical applicability. Black and white filtering is proposed via a Heaviside function to avoid the low density areas. Although some implementation issues exist, this function results in a more continuous floor surface, suggesting that a hierarchic layout is optimal from a structural point of view.},
+			note={EG-ICE, Eindhoven, The Netherlands},
+            link={https://research.tue.nl/nl/publications/generation-of-a-hierarchic-structure-via-3d-topology-optimisation}
+        }
+		
+		@inproceedings{hofmeyer2015con,
+            title={Strategies for Building Spatial and Structural Design Generation and Optimisation},
+            author={Hofmeyer, Herm and Davila Delgado, Juan},
+            year={2015},
+            abstract={Two strategies are presented that generate an optimised structural design by topology optimisation, which is applied in the first strategy to specific areas in a given spatial design and in the second strategy to the complete spatial design. Two other strategies apply evolutionary principles to generate optimised sets of one spatial design and one accompanying structural design via either a co-evolutionary method or a genetic algorithm. All four strategies are compared using academic spatial designs, and the co-evolutionary strategy is compared with a case study as well. The efficacy of topology optimisation depends on the load type; topology optimisation generates complete 3D building structural designs; and modifying the spatial design may be as effective as topology optimisation. Compared to the co-evolutionary method, the genetic algorithm finds more design alternatives, but converges slowly, however outcomes of both methods are similar. The case study shows that the co-evolutionary strategy provides useful design alternatives, yet is not capable of addressing the level of detail found in practice. Guidelines for the practical and academic applications of the strategies are given.},
+			note={IASDR, Brisbane, Australia},
+            link={https://research.tue.nl/nl/publications/strategies-for-building-spatial-and-structural-design-generation-}
+        }
+		
+		@inproceedings{boonstra2016con,
+            title={Super-Structure and Super-Structure Free Design Search Space Representations for a Building Spatial Design in Multi-Disciplinary Building Optimisation},
+            author={Boonstra, Sjonnie and Van der Blom, Koen and Hofmeyer, Herm and Amor, Robert and Emmerich, Michael},
+            year={2016},
+            abstract={In multi-disciplinary building optimisation, solutions depend on the representation of the design search space, the latter being a collection of all solutions. This paper presents two design search space representations and discusses their advantages and disadvantages: The first, a super-structure approach, requires all possible solutions to be prescribed in a so-called superstructure. The second approach, super-structure free, uses dynamic data structures that offer freedom in the range of possible solutions. It is concluded that both approaches may supplement each other, if applied in a combination of optimisation methods. A method for this combination of optimisation methods is proposed. The method includes the transformation of one representation into the other and vice versa. Finally, therefore in this paper these transformations are proposed, implemented, and verified as well.},
+			note={EG-ICE, Krakow, Poland},
+            link={https://research.tue.nl/nl/publications/super-structure-and-super-structure-free-design-search-space-repr}
+        }
+		
+		@inproceedings{vanderblom2016con,
+            title={A Super-Structure Based Optimisation Approach for Building Spatial Designs},
+            author={Van der Blom, Koen and Boonstra, Sjonnie and Hofmeyer, Herm and Emmerich, Michael},
+            year={2016},
+            abstract={Building design can be supported effectively by computer-aided design exploration. This paper investigates optimisation based on a mixed-integer super-structure representation of the search space of building spatial designs. It can take into account parametric as well as topological variations. In the suggested super-structure – the so-called supercube representation – discrete and continuous variables determine the existence, respectively, dimensioning of spaces of the building spatial design. Constraints are formulated as closed form equations and can be used to numerically assess the feasibility of designs. A population-based constraint-handling evolutionary strategy is developed. In the constraint handling repair and penalty methods are combined in a domain specific way. The method is tested on different search space sizes and first promising results are reported.},
+			note={ECCOMAS, Crete, Greece},
+            link={https://research.tue.nl/nl/publications/a-super-structure-based-optimisation-approach-for-building-spatia}
+        }
+		
+		@inproceedings{vanderblom2016con2,
+            title={Multicriteria Building Spatial Design with Mixed Integer Evolutionary Algorithms},
+            author={Van der Blom, Koen and Boonstra, Sjonnie and Hofmeyer, Herm and Emmerich, Michael},
+            year={2016},
+            abstract={This paper proposes a first step towards multidisciplinary design of building spatial designs. Two criteria, total surface area (i.e. energy performance) and compliance (i.e. structural performance), are combined in a multicriteria optimisation framework. A new way of representing building spatial designs in a mixed integer parameter space is used within this framework. Two state-of-the-art algorithms, namely NSGA-II and SMS-EMOA, are used and compared to compute Pareto front approximations for problems of different size. Moreover, the paper discusses domain specific search operators, which are compared to generic operators, and techniques to handle constraints within the mutation. The results give first insights into the trade-off between energy and structural performance and the scalability of the approach.},
+			note={PPSN, Edinburgh, United Kingdom},
+            link={https://research.tue.nl/nl/publications/multicriteria-building-spatial-design-with-mixed-integer-evolutio}
+        }
+		
+		@inproceedings{hofmeyer2016con,
+            title={Structural Topologies by Iterative Multi-Load Dependent Structural Grammars and Separate Volume Fraction Topology Optimisation},
+            author={Hofmeyer, Herm and Ten Heggeler, Niels},
+            year={2016},
+            abstract={For the development of a structural topology, structural grammars predefine locations of structural mass based on the building spatial design, whereas topology optimisation distributes structural mass freely and based on the loads. This paper presents a new method that involves first an iterative structural grammar that uses finite element simulations to optimise an initial structural topology for minimal structural mass. Hereafter topology optimisation is applied to modify the structural topology elements for minimal compliance. Due to the several groups of structural topology elements involved, a separate volume fraction is maintained for each group. Using an academic case study, the method is compared to standard structural grammars and topology optimisation, defining Pareto fronts for the objectives structural volume and strain energy. Future research will focus on the development of structural grammars that take into account openings, and on the implementation of the new method in simulations of co-evolutionary design processes.},
+			note={CIB-W78, Brisbane, Australia},
+            link={https://research.tue.nl/nl/publications/structural-topologies-by-iterative-multi-load-dependent-structura}
+        }
+		
+		@inproceedings{vanderblom2017con,
+            title={Configuring Advanced Evolutionary Algorithms for Multicriteria Building Spatial Design Optimisation},
+            author={Van der Blom, Koen and Boonstra, Sjonnie and Hofmeyer, Herm and Bäck, Thomas and Emmerich, Michael},
+            year={2017},
+            abstract={In this paper solution approaches for solving the building spatial design optimisation problem for structural and energy performance are advanced on multiple fronts. A new initialisation operator is introduced to generate an unbiased initial population for a tailored version of SMS-EMOA with problem specific operators. Improvements to the mutation operator are proposed to eliminate bias and allow mutations consisting of multiple steps. Moreover, landscape analysis is applied in order to explore the landscape of both objectives and investigate the behaviour of the mutation operator. Parameter tuning is applied with the irace package and the Mixed Integer Evolution Strategy to find improved parameter settings and explore tuning with a relatively small number of expensive evaluations. Finally, the performances of the standard and tailored SMS-EMOA algorithms with tuned parameters are compared.},
+			note={IEEE CEC, San Sebastian, Spain},
+            link={https://research.tue.nl/nl/publications/configuring-advanced-evolutionary-algorithms-for-multicriteria-bu}
+        }
+		
+		@inproceedings{boonstra2017con,
+            title={Combined Super-Structured and Super-Structure Free Optimisation of Building Spatial Designs},
+            author={Boonstra, Sjonnie and Van der Blom, Koen and Hofmeyer, Herm and Emmerich, Michael},
+            year={2017},
+            abstract={This paper proposes a new method for multi-disciplinary optimisation of building spatial designs in the preliminary design stage. First it discusses two recently developed building spatial design optimisation methods, one using a super-structured approach and the other applying a superstructure free approach. Subsequently, a combination of the two methods into a new hybrid method is presented. A case study is demonstrated to compare the three methods based on their performance and the characteristics of their design evolution. First results show that the hybrid method could aid in the effective exploration of large design search spaces by selecting more confined design search spaces based on engineering knowledge.},
+			note={EG-ICE, Nottingham, United Kingdom},
+            link={https://research.tue.nl/nl/publications/combined-super-structured-and-super-structure-free-optimisation-o}
+        }
+		
+		@inproceedings{boonstra2018con,
+            title={Coupling Between a Building Spatial Design Optimisation Toolbox and BouwConnect BIM},
+            author={Boonstra, Sjonnie and Van der Blom, Koen and Hofmeyer, Herm and Van den Buijs, Joost and Emmerich, Michael},
+            year={2018},
+            abstract={This paper presents a framework in which a building spatial design optimisation toolbox and a building information modelling environment are coupled. The coupling is used in a case study to investigate the possible challenges that hamper the interaction between a designer and an optimisation method within a BIM environment. The following challenges are identified: Accessibility of optimisation methods; Discrepancies in design representations; And, data transfer between BIM models. Moreover, the study provides insights for the application of optimisation in BIM.},
+			note={CIB-W78, Chicago, United States},
+            link={https://research.tue.nl/nl/publications/coupling-between-a-building-spatial-design-optimisation-toolbox-a}
+        }
+		
+		@inproceedings{vanderblom2019con,
+            title={Analysing Optimisation Data for Multicriteria Building Spatial Design},
+            author={Van der Blom, Koen and Boonstra, Sjonnie and Hofmeyer, Herm and Emmerich, Michael},
+            year={2019},
+            abstract={Domain experts can benefit from optimisation simply by getting better solutions, or by obtaining knowledge about possible trade-offs from a Pareto front. However, just providing a better solution based on objective function values is often not sufficient. It is desirable for domain experts to understand design principles that lead to a better solution concerning different objectives. Such insights will help the domain expert to gain confidence in a solution provided by the optimiser. In this paper, the aim is to learn heuristic rules on building spatial design by data-mining multi-objective optimisation results. From the optimisation data a domain expert can gain new insights that can help engineers in the future; this is termed innovization. Originally used for applications in mechanical engineering, innovization is here applied for the first time for optimisation of building spatial designs with respect to thermal and structural performance.},
+			note={EMO, East Lansing, United States},
+            link={https://research.tue.nl/nl/publications/analysing-optimisation-data-for-multicriteria-building-spatial-de}
+        }
+		
+		@inproceedings{hofmeyer2019con,
+            title={Effects of 3D Zoning of Spatial Designs on the Performance of Structure Systems},
+            author={Hofmeyer, Herm and Claessens, Dennis and Boonstra, Sjonnie and De Vries, Bauke},
+            year={2019},
+            abstract={A particular application for informed building design concerns the intelligent synthesis of a structure system for a conceptual spatial design. As part of this synthesis, the positioning of structural elements is normally related to the surfaces of the spaces that form the spatial design. It is shown that if surfaces of zones are taken instead, with a zone being a group of complete or possibly incomplete spaces, structural performance of the space-based systems may be Pareto dominated by the zone-based systems. This indicates that zones are a useful concept to improve structural performance. Also, the variety of zoned designs for a single spatial design delivers, together with a single structural grammar, many variants for a structure system.},
+			note={CAADRIA, Wellington, New Zealand},
+            link={https://research.tue.nl/nl/publications/effects-of-3d-zoning-of-spatial-designs-on-the-performance-of-str}
+        }
+		
+		@inproceedings{boonstra2019con,
+            title={Co-evolutionary Design Processes Applied to Building Spatial Design Optimization},
+            author={Boonstra, Sjonnie and Van der Blom, Koen and Hofmeyer, Herm and Emmerich, Michael},
+            year={2019},
+            abstract={Building spatial design is in practice a co-evolutionary design process. To optimize a building spatial design, an evolutionary algorithm can be used, but the search space is large and complex. In simulations of co-evolutionary design processes the size and complexity are not hindering the search. Such simulations are in the presented work proposed for finding search spaces that are small but still contain high quality solutions.},
+			note={WCSMO, Beijing, China},
+            link={https://research.tue.nl/en/publications/co-evolutionary-design-processes-applied-to-building-spatial-desi}
+        }
+		
+		@inproceedings{boonstra2019con2,
+            title={Realistic Structural Stabilization based on Spatial Zoning},
+            author={Boonstra, Sjonnie and Claessens, Dennis and Hofmeyer, Herm and De Vries, Bauke},
+            year={2019},
+            abstract={An automated stabilization procedure for structural designs is presented and applied in conjunction with a building spatial zoning algorithm. The stabilization procedure can stabilize kinematic systems in a building’s structural design model while taking into account structurally relevant zones within that building’s spatial design. A case study shows that the presented stabilization procedure, compared to an existing stabilization technique, can find stiffer and more practical structural designs that are less sensitive to progressive collapse.},
+			note={EG-ICE, Leuven, Belgium},
+            link={https://research.tue.nl/en/publications/realistic-structural-stabilization-based-on-spatial-zoning}
+        }
+		
+		@inproceedings{hofmeyer2021con,
+            title={Co-Evolutionary Spatial-Structural Building Design Optimisation Including Facade Openings},
+            author={Hofmeyer, Herm and De Goede, Thijs and Boonstra, Sjonnie},
+            year={2021},
+            abstract={Within co-evolutionary building design simulations, a spatial design can be automatically transformed into a structural design, and its structural performance can lead to modifications of the spatial design, after which a new cycle starts. This paper presents two procedures to include facade openings in these simulations, to allow for future simulations that include lighting. The first procedure reassigns a fixed pattern of facade openings to the spatial design each cycle, whereas the second procedure only assigns a pattern at the start, and modified spaces inherit their openings. For structural peformance, it is concluded that deterministic vertical opening patterns, with a low facade opening ratio, lead to a reduction of the number of stories, and consequently optimise the structural design. Also, it is shown that the first procedure maintains facade opening ratios during simulations, whereas the second procedure leads to decreasing openness, and more unconnected spaces. As such the first procedure is considered for an upcoming project, where spatial-structural-thermal-lighting building optimisation is investigated, including non-rectangular spatial designs.},
+			note={CAADRIA, Hong Kong (ONLINE), China},
+            link={https://research.tue.nl/en/publications/co-evolutionary-spatial-structural-building-design-optimisation-i}
+        }
+		
+		@inproceedings{hofmeyer2021con2,
+            title={The Influence of TO Design Space—from Shell to Volume—on the Generation of Building Structure Systems},
+            author={Hofmeyer, Herm and Schoenmaker, Diane and Boonstra, Sjonnie and Pauwels, Pieter},
+            year={2021},
+            abstract={A part of design (decision) support systems comprises the automatic generation of a structural system for a building spatial design. This generation can be carried out by Topology Optimisation (TO), for which different geometrical design spaces can be selected. Here, three grammars to generate various TO (geometrical) design spaces are studied: (a) the Flat Shell Grammar (FSG), which initiates flat shells for each space surface; (b) a Partial Volume Grammar (PVG), which generates volumes for each surface; and (c) the Volume Grammar (VG) that sees the total volume of the building spatial design as the geometrical design space. By two case studies, it can be concluded that the more freedom a geometrical design space provides, the better the structural performance is. Also, structural systems suggested using PVG, with a large thickness of the volumes, are difficult to interpret. For future research, VG or PVG grammars are advised, including a study for non-rectangular designs and openings.},
+			note={EG-ICE, Berlin (ONLINE), Germany},
+            link={https://research.tue.nl/en/publications/the-influence-of-to-design-spacefrom-shell-to-volumeon-the-genera}
+        }
+		
+		@inproceedings{boonstra2022con,
+            title={Multi-Disciplinary Optimization of Building Spatial Designs},
+            author={Boonstra, Sjonnie and Van der Blom, Koen and Hofmeyer, Herm and Emmerich, Michael and Ezendam, Tessa},
+            year={2022},
+            abstract={The global expenditure of resources may be significantly reduced by optimizing building designs, especially at an early stage. This paper presents three methods for early stage building spatial design and optimization: (I) an evolutionary algorithm, (II) a simulation of design processes, and (III) a hybridization of methods (I) and (II). Both methods (I) and (II) naturally show advantages and disadvantages, which have been analysed. Accordingly, it is shown that hybridization successfully combines both the methods and their advantages while their disadvantages are diminished, yielding a method that can find better results in a more efficient approach.},
+			note={ECT, Montpellier, France},
+            link={https://research.tue.nl/en/publications/multi-disciplinary-optimization-of-building-spatial-designs}
+        }
+		
+		@inproceedings{ezendam2022con,
+            title={An Automatic Partitioning Method for Multi-Disciplinary Non-Orthogonal Building Spatial Design and Optimisation},
+            author={Ezendam, Tessa and Pereverdieva, Ksenia and Hofmeyer, Herm and Emmerich, Michael},
+            year={2022},
+            abstract={Design support systems should be able to handle a variety of Building Spatial Designs (BSDs), while at the same time considering multiple disciplines, to support the preliminary multi-disciplinary building design process. For this purpose, this paper presents a Triangulation Partitioning method (TP) to obtain a triangular prism conformal geometry for a wide variety of BSDs, however, limited to vertical walls and horizontal floors. It is shown that this method offers a generalized geometric basis for the definition of discipline specific models.},
+			note={ECT, Montpellier, France},
+            link={https://research.tue.nl/en/publications/an-automatic-partitioning-method-for-multi-disciplinary-non-ortho}
+        }
+		
+		@inproceedings{pereverdieva2023con,
+            title={The Prism-Net Search Space Representation for Multi-Objective Building Spatial Design},
+            author={Pereverdieva, Ksenia and Emmerich, Michael and Deutz, André and Ezendam, Tessa and Bäck, Thomas and Hofmeyer, Herm},
+            year={2023},
+            abstract={A building spatial design (BSD) determines external and internal walls and ceilings of a building. The design space has a hierarchical structure, in which decisions on the existence or non-existence of spatial components determine the existence of variables related to these spaces, such as sizing and angles. In the optimization of BSDs it is envisioned to optimize various performance indicators from multiple disciplines in concert, such as structural, functional, thermal, and daylight performance. Existing representations of design spaces suffer from severe limitations, such as only representing orthogonal designs or representing the structures in parametric superstructure, allowing only for limited design variations. This paper proposes prism nets - a new way of representing the search space of BSDs based on triangulations defining space filling collections of triangular prisms that can be combined via coloring parameters to spaces. Prism nets can accommodate for non-orthogonal designs and are flexible in terms of topological variations. We follow the guidelines for representation and operator design proposed in the framework of metric-based evolutionary algorithms. The main contribution of the paper is a detailed discussion of the search space representation and corresponding mutation operators. Moreover, a proof of concept example demonstrates the integration into multi-objective evolutionary algorithms and provides first results on a simple, but reproducible, benchmark problem.},
+			note={EMO, Leiden, The Netherlands},
+            link={https://research.tue.nl/en/publications/the-prism-net-search-space-representation-for-multi-objective-bui}
+        }
+		
+		@inproceedings{hassel2022con,
+            title={Machine Learning and Genetic Algorithms for Conformal Geometries in Design Support Systems},
+            author={Van Hassel, Sebastiaan and Hofmeyer, Herm and Ezendam, Tessa and Pauwels, Pieter},
+            year={2022},
+            abstract={To optimise both building designs and their underlying design processes, design support systems exist. For domain specific analyses, these systems benefit from a conformal (CF) representation for the Building Spatial Design (BSD). In a conformal representation, for all entities: the vertices of an entity are, if intersecting another entity, only allowed to coincide with this other entity's vertices. This paper presents research on whether Machine Learning (ML) and Genetic Algorithms (GA) can be used to obtain a conformal geometry for BSDs. For ML, a neural network is trained to learn the complex relation between BSDs and their conformal representations. GAs are first used to find all quad-hexahedrons in the search space, then to find sets of quad-hexahedrons that form the conformal design. A trained ML model does provide outcomes, but not very useful, even with encoding the configuration type of the design. Differently, the GA finds conformal designs for many instances, even for non-orthogonal designs.},
+			note={ECPPM, Trondheim, Norway},
+            link={https://research.tue.nl/en/publications/machine-learning-and-genetic-algorithms-for-conformal-geometries-}
+        }
+		
+		@inproceedings{hofmeyer2024con,
+            title={A Simple Tying Method for Overlapping Finite Element Meshes in Design Support Systems},
+            author={Hofmeyer, Herm and Van der Wal, Sanne and Boonstra, Sjonnie and Pauwels, Pieter},
+            year={2024},
+            abstract={Design support systems help, among others, to optimize building spatial designs; simulate design processes; and design structural systems. In these support systems, parts of the mesh of a finite element model may overlap, which, if not appropriately considered, leads to an inaccurate assessment of the structural system. This paper presents a simple tying method for early-stage design support systems, in which overlapping surfaces in the design are found. Subsequently, the finite element nodes within so-called point clouds are tied. The method, so far implemented for square surfaces, is verified by three orthogonal designs, for which the strain energy (which is correlated with stiffness) is predicted: The tying method converges to accurate results for finer meshes. Finally, the tying method is demonstrated as working in the background of co-evolutionary spatial-structural design process simulations. The tying method results in the same type of design evolution as simulations that do not need tying, but some differences exist due to sensitivities in the simulations. In the future, computational costs should be reduced, and rectangular surfaces and non-orthogonal buildings can be studied.},
+			note={ASCE, Pittsburgh, United States},
+            link={not yet available}
+        }
+		
     `;
+	
 
     let articles = [];
 
