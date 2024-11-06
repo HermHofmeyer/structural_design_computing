@@ -11,7 +11,12 @@ h1, h2 {
     margin-bottom: 1rem;
 }
 
+.modal-dialog {
+    max-width: 75%;
+}
+
 .tile {
+    min-height: 500px;
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -21,7 +26,33 @@ h1, h2 {
     text-align: center;
     margin-bottom: 20px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    box-sizing: border-box;
+    /* Adjust height through JavaScript */
 }
+
+.tile-title {
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+
+.tile-image {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.tile-author {
+    margin-bottom: 0;
+    color: #666;
+    font-size: 0.7  rem;
+}
+
 
 .tile:hover {
     transform: translateY(-10px);
@@ -40,7 +71,7 @@ h1, h2 {
 }
 
 .tile p {
-    padding: 0 1rem 1rem;
+    padding: 0 1.5rem 1.5rem;
     font-size: 1rem;
     color: #666;
 }

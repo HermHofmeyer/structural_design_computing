@@ -735,22 +735,46 @@ document.addEventListener("DOMContentLoaded", function() {
         return parsedArticles;
     }
 
-    function createPersonTile(name) {
-        const lastName = name.split(',')[0].trim().split(' ').pop();  // Extract last name
+function createPersonTile(name, affiliation) {
+        const lastName = name.split(',')[0].trim().split(' ').pop();
+        const imgSrc = `images/person_${lastName}.jpg`;
+        const imgExists = new Image();
         const col = document.createElement('div');
-        col.className = 'col-md-3 col-sm-6';
+        col.className = 'col-md-2 col-sm-6';
+        const nameHTML = `<h3>${name}</h3>`;
+
+       // Set up default content initially
         col.innerHTML = `
             <div class="tile" onclick="showToastAndFilterArticles('${name}')">
-                <img src="images/person_${lastName}.jpg" alt="${name}" class="img-fluid">
-                <h3>${name}</h3>
+                <img src="images/default.png" alt=" " class="img-fluid">
+                ${nameHTML}
+                <p>${affiliation || 'No affiliation'}</p>
             </div>
         `;
-        return col;
+        // Handle the image loading status with both .complete and event listeners
+        imgExists.src = imgSrc;
+        if (imgExists.complete) {
+            // If complete is true, directly update src and return immediately
+            col.querySelector("img").src = imgSrc;
+            return [col, true];
+        } else {
+            // If complete is false, use onload and onerror as a fallback
+            imgExists.onload = () => {
+                col.querySelector("img").src = imgSrc;
+                return [col, true];
+            };
+            imgExists.onerror = () => {
+                // Error handler: image remains as default.png if loading fails
+            };
+
+            // Since we can’t be sure of the image load, assume `false` for now
+            return [col, false];
+        }
     }
 
     function createPhDThesisTile(thesis) {
         const col = document.createElement('div');
-        col.className = 'col-md-4 col-sm-6';
+        col.className = 'col-md-3 col-sm-6';
         col.innerHTML = `
             <div class="tile" onclick="showThesisModal('${thesis.key}')">
                 <img src="images/phdthesis_${thesis.key}.jpg" alt="${thesis.title}" class="img-fluid">
@@ -763,7 +787,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function createMScThesisTile(thesis) {
         const col = document.createElement('div');
-        col.className = 'col-md-4 col-sm-6';
+        col.className = 'col-md-3 col-sm-6';
         col.innerHTML = `
             <div class="tile" onclick="showThesisModal('${thesis.key}')">
                 <img src="images/mastersthesis_${thesis.key}.jpg" alt="${thesis.title}" class="img-fluid">
@@ -776,7 +800,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function createConferenceThesisTile(thesis) {
         const col = document.createElement('div');
-        col.className = 'col-md-4 col-sm-6';
+        col.className = 'col-md-3 col-sm-6';
         col.innerHTML = `
             <div class="tile" onclick="showThesisModal('${thesis.key}')">
                 <img src="images/inproceedings_${thesis.key}.jpg" alt="${thesis.title}" class="img-fluid">
@@ -789,7 +813,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function createArticleTile(article) {
         const col = document.createElement('div');
-        col.className = 'col-md-4 col-sm-6';
+        col.className = 'col-md-3 col-sm-6';
         col.innerHTML = `
             <div class="tile" onclick="showArticleModal('${article.key}')">
                 <img src="images/article_${article.key}.jpg" alt="${article.title}" class="img-fluid">
@@ -800,18 +824,117 @@ document.addEventListener("DOMContentLoaded", function() {
         return col;
     }
 
+    function readAffiliationMap() {
+        return {
+            'Hofmeyer, Herm': 'Eindhoven University of Technology',
+            'Davila Delgado, Juan': 'Birmingham City University',
+            'Schevenels, Mattias': 'KU Leuven',
+            'Boonstra, Sjonnie': 'Swiss Federal Institute of Technology Lausanne (EPFL)',
+            'Emmerich, Michael': 'Leiden University',
+            'De Wilde, Pieter': 'LTH Lund University',
+            'Claessens, Dennis': 'Eindhoven University of Technology',
+            'Kuling, Jeffrey': 'Eindhoven University of Technology',
+            'Van Limpt, Bas': 'Eindhoven University of Technology',
+            'Smulders, Carola': 'Eindhoven University of Technology',
+            'Ten Heggeler, Niels': 'Eindhoven University of Technology',
+            'De Goede, Thijs': 'Eindhoven University of Technology',
+            'Snel, Thomas': 'Eindhoven University of Technology',
+            'Schoenmaker, Diane': 'Eindhoven University of Technology',
+            'Ezendam, Tessa': 'Eindhoven University of Technology',
+            'Van Hassel, Sebastiaan': 'Eindhoven University of Technology',
+            'Van der Wal, Sanne': 'Eindhoven University of Technology',
+            'Heuvelman, Janneke': 'Eindhoven University of Technology',
+            'Turkstra, Jildert': 'Eindhoven University of Technology',
+            'Kerstens, Jan': 'Eindhoven University of Technology',
+            'Russell, Peter': 'Eindhoven University of Technology',
+            'Peeten, Dennis': 'Eindhoven University of Technology',
+            'Amor, Robert': 'University of Auckland',
+            'Bäck, Thomas': 'Leiden University',
+            'Van den Buijs, Joost': 'Eindhoven University of Technology',
+            'De Vries, Bauke': 'Eindhoven University of Technology',
+            'Pauwels, Pieter': 'Eindhoven University of Technology',
+            'Pereverdieva, Ksenia': 'Leiden University',
+            'Deutz, André': 'Eindhoven University of Technology',
+    
+            // No specific affiliation found, can be left as "No affiliation" if needed
+            'Van der Blom, Koen': 'No affiliation',
+            'Rutten, Harry': 'No affiliation',
+            'Fijneman, Henk': 'No affiliation',
+            'Bakker, Monique': 'No affiliation',
+            'Van Roosmalen, Maartje': 'No affiliation',
+            'Gelbal, Firat': 'No affiliation',
+            
+        };
+    }
+    
+
+    function findAffiliation(name) {
+        const affiliationMap = readAffiliationMap();
+        return affiliationMap[name] || '';
+    }
+
+    function getCounts(articles, name) {
+        // Create a map to store each author's article count
+        const authorCounts = new Map();
+    
+        // Loop through each article
+        articles.forEach(article => {
+            // Split authors by 'and' and trim whitespace
+            const authors = article.author.split(' and ');
+            authors.forEach(author => {
+                const trimmedAuthor = author.trim();
+                // Increment the count for this author in the map
+                authorCounts.set(trimmedAuthor, (authorCounts.get(trimmedAuthor) || 0) + 1);
+            });
+        });
+    
+        // Return the count for the specified author
+        return authorCounts.get(name) || 0;
+    }
+    
+
     function populatePeople(articles) {
         const peopleSet = new Set();
+        
+        // Collect all unique authors
         articles.forEach(article => {
             const authors = article.author.split(' and ');
             authors.forEach(author => peopleSet.add(author.trim()));
         });
+    
+        // Initialize arrays for people with and without images
+        let people_with_images = [];
+        let people_without_images = [];
+    
         const peopleSection = document.getElementById('people').querySelector('.row');
+    
+        // Populate the arrays with author information and their article counts
         peopleSet.forEach(name => {
-            const personTile = createPersonTile(name);
-            peopleSection.appendChild(personTile);
+            const author_counts = getCounts(articles, name);
+            const personTile = createPersonTile(name, findAffiliation(name));
+    
+            if (personTile[1] === true) {
+                people_with_images.push({ element: personTile[0], count: author_counts });
+            } else {
+                people_without_images.push({ element: personTile[0], count: author_counts });
+            }
+        });
+    
+        // Sort people with images by article count in descending order
+        people_with_images.sort((a, b) => b.count - a.count);
+        // Sort people without images by article count in descending order
+        people_without_images.sort((a, b) => b.count - a.count);
+    
+        // Append sorted elements to the people section
+        people_with_images.forEach(person => {
+            peopleSection.appendChild(person.element);
+        });
+    
+        people_without_images.forEach(person => {
+            peopleSection.appendChild(person.element);
         });
     }
+    
 
     function populatePhDTheses(articles) {
         const thesesSet = new Set(articles.filter(article => article.type === 'phdthesis').map(article => ({ key: article.key, title: article.title, description: article.note, author: article.author, year: article.year || '' })));
@@ -864,6 +987,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     init();
+    
 
     window.showToastAndFilterArticles = function(author) {
         const toastHTML = `
@@ -910,25 +1034,34 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.showThesisModal = function(thesisKey) {
         const thesis = articles.find(a => a.key === thesisKey);
-        const authors = thesis.author.split(' and ').map(author => `<a href="javascript:showToastAndFilterArticles('${author.trim()}')">${author.trim()}</a>`).join(', ');
-
-        $('#thesisModalLabel').text(thesis.title);
-        $('#thesisModalDesc').html(`
+        const authors = thesis.author.split(' and ')
+            .map(author => `<a href="javascript:showToastAndFilterArticles('${author.trim()}')">${author.trim()}</a>`)
+            .join('; ');
+    
+        // Set modal content directly
+        const thesisModal = document.getElementById('thesisModal');
+        thesisModal.querySelector('.modal-title').textContent = thesis.title;
+        thesisModal.querySelector('.modal-body').innerHTML = `
             <p><strong>Author:</strong> ${authors}</p>
             <p><strong>Year:</strong> ${thesis.year}</p>
             <p><strong>Abstract:</strong> ${thesis.abstract || 'No abstract available.'}</p>
             <p><strong>Note:</strong> ${thesis.note || 'No additional notes.'}</p>
             <p><strong>Link:</strong> <a href="${thesis.link}" target="_blank">${thesis.link}</a></p>
-        `);
+        `;
+    
         $('#thesisModal').modal('show');
     };
-
+    
     window.showArticleModal = function(articleKey) {
         const article = articles.find(a => a.key === articleKey);
-        const authors = article.author.split(' and ').map(author => `<a href="javascript:showToastAndFilterArticles('${author.trim()}')">${author.trim()}</a>`).join(', ');
-
-        $('#articleModalLabel').text(article.title);
-        $('#articleModalDesc').html(`
+        const authors = article.author.split(' and ')
+            .map(author => `<a href="javascript:showToastAndFilterArticles('${author.trim()}')">${author.trim()}</a>`)
+            .join('; ');
+    
+        // Set modal content directly
+        const articleModal = document.getElementById('articleModal');
+        articleModal.querySelector('.modal-title').textContent = article.title;
+        articleModal.querySelector('.modal-body').innerHTML = `
             <p><strong>Authors:</strong> ${authors}</p>
             <p><strong>Journal:</strong> ${article.journal}</p>
             <p><strong>Year:</strong> ${article.year}</p>
@@ -937,7 +1070,8 @@ document.addEventListener("DOMContentLoaded", function() {
             <p><strong>Abstract:</strong> ${article.abstract || 'No abstract available.'}</p>
             <p><strong>Note:</strong> ${article.note || 'No additional notes.'}</p>
             <p><strong>Link:</strong> <a href="${article.link}" target="_blank">${article.link}</a></p>
-        `);
+        `;
+    
         $('#articleModal').modal('show');
-    };
+    };    
 });
