@@ -367,6 +367,16 @@ document.addEventListener("DOMContentLoaded", function() {
             key={mscjildert},
 			link={https://research.tue.nl/en/studentTheses/ai-integration-in-design-processes-a-study-of-human-human-ai-and-},
         }
+		@mastersthesis{mscquimara,
+            author={Van den Hoeven, Quimara},
+            title={Building Spatial Design Simulation and Optimization for Structural Design and Daylight},
+            school={Eindhoven University of Technology},
+            year={2025},
+            abstract={Designing high-performance buildings requires addressing conflicting objectives across disciplines such as structural and daylight performance. While computational methods enhance multi-disciplinary optimization, existing workflows often treat these aspects sequentially rather than integrally, limiting their potential. This study aims to explore a co-evolutionary approach integrating structural and daylight objectives during early building design, using the Building Spatial Optimization (BSO) Toolbox. The BSO Toolbox was extended to include daylight analysis, integrating daylight simulation alongside existing structural analysis. In the iterative optimization process, the Building Spatial Designs (BSDs) were adjusted alternately to minimize strain energy (structural objective) and the inverse of the Average Daylight Factor (daylight objective). Simulations were conducted on five different BSDs using varying window height ratios (WHRs). Evaluation criteria included strain energy, the inverse of ADF, and a target-based daylight metric in accordance with the BS EN 17037:2018. Structural optimization produced flatter BSDs with reduced load accumulation, while daylight optimization favored tall, high-building perimeter BSDs (e.g., U- and O-shapes). A clear trade-off was observed: improving one objective often negatively impacted the other. Despite these conflicts, compromised designs improved structural and daylight performance by 80% and 70%, respectively, over initial BSDs. Varying WHRs did not qualitatively alter optimization trends but influenced daylight performance. A co-evolutionary approach effectively balances structural and daylight objectives, improving BSDs over iterations. While U- and O-shaped BSDs performed well, other forms like stepped designs remained challenging to achieve. Future research should study the trade-offs between structural and daylight objectives, explore additional objectives (e.g., thermal performance), and validate real-world applicability. This research demonstrates the potential for integrated, multi-disciplinary optimization on BSDs.},
+            note={MSc Thesis},
+            key={mscquimara},
+			link={https://research.tue.nl/en/studentTheses/building-spatial-design-simulation-and-optimization-for-structura},
+		}
         @inproceedings{hofmeyer2005con,
             title={Improving Design using Autonomous Spatial and Structural Generators},
             author={Hofmeyer, Herm and Rutten, Harry and Fijneman, Henk},
@@ -830,8 +840,8 @@ function createPersonTile(name, affiliation) {
             'Davila Delgado, Juan': 'Birmingham City University',
             'Schevenels, Mattias': 'KU Leuven',
             'Boonstra, Sjonnie': 'Swiss Federal Institute of Technology Lausanne (EPFL)',
-            'Emmerich, Michael': 'Leiden University',
-            'De Wilde, Pieter': 'LTH Lund University',
+            'Emmerich, Michael': 'University of Jyväskylä',
+            'De Wilde, Pieter': 'Lund University',
             'Claessens, Dennis': 'Eindhoven University of Technology',
             'Kuling, Jeffrey': 'Eindhoven University of Technology',
             'Van Limpt, Bas': 'Eindhoven University of Technology',
@@ -846,23 +856,24 @@ function createPersonTile(name, affiliation) {
             'Heuvelman, Janneke': 'Eindhoven University of Technology',
             'Turkstra, Jildert': 'Eindhoven University of Technology',
             'Kerstens, Jan': 'Eindhoven University of Technology',
-            'Russell, Peter': 'Eindhoven University of Technology',
+            'Russell, Peter': 'Tsinghua Shenzhen International Graduate School',
             'Peeten, Dennis': 'Eindhoven University of Technology',
             'Amor, Robert': 'University of Auckland',
             'Bäck, Thomas': 'Leiden University',
-            'Van den Buijs, Joost': 'Eindhoven University of Technology',
+            'Van den Buijs, Joost': 'De Twee Snoeken',
             'De Vries, Bauke': 'Eindhoven University of Technology',
             'Pauwels, Pieter': 'Eindhoven University of Technology',
             'Pereverdieva, Ksenia': 'Leiden University',
-            'Deutz, André': 'Eindhoven University of Technology',
-    
+            'Deutz, André': 'Leiden University',
+			'Van den Hoeven, Quimara': 'Eindhoven University of Technology',
+            'Van der Blom, Koen': 'Sorbonne University' ,
             // No specific affiliation found, can be left as "No affiliation" if needed
-            'Van der Blom, Koen': 'No affiliation',
-            'Rutten, Harry': 'No affiliation',
-            'Fijneman, Henk': 'No affiliation',
-            'Bakker, Monique': 'No affiliation',
-            'Van Roosmalen, Maartje': 'No affiliation',
-            'Gelbal, Firat': 'No affiliation',
+            'Rutten, Harry': 'Eindhoven University of Technology',
+            'Fijneman, Henk': 'Eindhoven University of Technology',
+            'Bakker, Monique': 'Eindhoven University of Technology',
+            'Van Roosmalen, Maartje': 'Eindhoven University of Technology',
+            'Gelbal, Firat': 'Eindhoven University of Technology',
+			'Van Schijndel, Jos': 'Eindhoven University of Technology',
             
         };
     }
@@ -1073,5 +1084,12 @@ function createPersonTile(name, affiliation) {
         `;
     
         $('#articleModal').modal('show');
-    };    
+    };
+	
+var refresh = $window.localStorage.getItem('refresh');
+console.log(refresh);
+if (refresh===null){
+    window.location.reload();
+    $window.localStorage.setItem('refresh', "1");
+}    
 });
