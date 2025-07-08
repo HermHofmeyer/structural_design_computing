@@ -719,6 +719,24 @@ document.addEventListener("DOMContentLoaded", function() {
             link={not yet available}
         }
 		
+		@inproceedings{pereverdieva2025con,
+            title={Comparative Analysis of Indicators for Multi-objective Diversity Optimization},
+            author={Pereverdieva, Ksenia and Deutz, André and Ezendam, Tessa and Bäck, Thomas and Hofmeyer, Herm and Emmerich, Michael},
+            year={2025},
+            abstract={Indicator-based (multi-objective) diversity optimization aims at finding a set of near (Pareto)optimal solutions that maximizes adiversity indicator, where diversity is typically interpreted as the number of essentially different solutions. Whereas, in the first diversity-oriented evolutionary multi-objective optimization algorithm, the NOAH algorithm by Ulrich and Thiele, the Solow Polasky Diversity (SP Diversity, also known as Magnitude [1]) served as a metric, other diversity indicators could be considered. We examine the parameter-free Max-Min Diversity and the Riesz s-Energy, which features uniformly distributed solution sets. Focusing on multi-objective diversity optimization, we discuss different diversity indicators from the perspective of indicator-based evolutionary algorithms with multiple objectives. We examine theoretical, computational, and practical properties of these indicators, such as monotonicity in species, twinning, monotonicity in distance, strict monotonicity in distance, uniformity of maximizing point sets, computational effort for a set of size n, single-point contributions, subset selection, and submodularity. We present new theorems—including a proof of the NP-hardness of the Riesz s-Energy Subset Selection Problem—and consolidate existing results from the literature. In the experiments, we apply these indicators in the NOAH algorithm to analyze search dynamics via an example. We study how optimizing one indicator impacts others and propose NOAH-specific modifications for the Max-Min indicator.},
+			note={EMO 2025, Canberra, Australia},
+            link={https://research.tue.nl/nl/publications/comparative-analysis-of-indicators-for-multi-objective-diversity-}
+        }
+		
+		@inproceedings{ezendam2025con,
+            title={Building Spatial Design Simulation and Optimisation with Structural and Daylight Objectives},
+            author={Ezendam, Tessa and Van den Hoeven, Quimara and Hofmeyer, Herm and Aarts, Mariëlle},
+            year={2025},
+            abstract={ The inevitable interdependencies and trade-offs between structural and daylight disciplines are rarely researched in multi-disciplinary design simulation and optimisation. As such, this paper presents a development of simulations of co-evolutionary design processes used for optimisation. The simulations entail an iterative process to delete or split spaces of a Building Spatial Design (BSD) according to its structural or daylight performance. Three types of co-evolutionary processes are investigated, i.e. (i) spatial-structural; (ii) spatial-daylight; and (iii) alternately (i) and (ii). Besides, an academic case study is carried out, where a variety of window sizes is considered while performing structural and daylight simulations. As a result, the general tendencies for structural and daylight objectives,their trade-offs, and the conflicts between optimising for structural or daylight performance are showcased. Furthermore, it is noted that co-evolutionary design simulations, if used for optimisation, show large improvements in just a few iterations.},
+			note={EG-ICE 2025, Glasgow, United Kingdom},
+            link={https://research.tue.nl/nl/publications/building-spatial-design-simulation-and-optimisation-with-structur}
+        }
+		
     `;
 	
 
@@ -874,8 +892,8 @@ function createPersonTile(name, affiliation) {
             'Van Roosmalen, Maartje': 'Eindhoven University of Technology',
             'Gelbal, Firat': 'Eindhoven University of Technology',
 			'Van Schijndel, Jos': 'Eindhoven University of Technology',
-            
-        };
+			'Aarts, Mariëlle': 'Eindhoven University of Technology',
+                    };
     }
     
 
