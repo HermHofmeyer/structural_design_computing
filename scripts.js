@@ -958,6 +958,7 @@ function createPersonTile(name, affiliation) {
 			'Van Schijndel, Jos': 'ASML',
 			'Aarts, Mariëlle': 'Eindhoven University of Technology',
 			'Wilking, Ashleigh': 'Former MSc student TU/e',
+			'Schmidt, Ralf': 'Eindhoven University of Technology / EAISI',
                     };
     }
     
