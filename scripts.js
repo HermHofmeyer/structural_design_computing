@@ -777,10 +777,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		@inproceedings{hofmeyer2024con,
             title={A Simple Tying Method for Overlapping Finite Element Meshes in Design Support Systems},
             author={Hofmeyer, Herm and Van der Wal, Sanne and Boonstra, Sjonnie and Pauwels, Pieter},
-            year={2024},
+            year={2025},
             abstract={Design support systems help, among others, to optimize building spatial designs; simulate design processes; and design structural systems. In these support systems, parts of the mesh of a finite element model may overlap, which, if not appropriately considered, leads to an inaccurate assessment of the structural system. This paper presents a simple tying method for early-stage design support systems, in which overlapping surfaces in the design are found. Subsequently, the finite element nodes within so-called point clouds are tied. The method, so far implemented for square surfaces, is verified by three orthogonal designs, for which the strain energy (which is correlated with stiffness) is predicted: The tying method converges to accurate results for finer meshes. Finally, the tying method is demonstrated as working in the background of co-evolutionary spatial-structural design process simulations. The tying method results in the same type of design evolution as simulations that do not need tying, but some differences exist due to sensitivities in the simulations. In the future, computational costs should be reduced, and rectangular surfaces and non-orthogonal buildings can be studied.},
 			note={ASCE, Pittsburgh, United States},
-            link={not yet available}
+            link={https://research.tue.nl/p/en/research-outputs/a-simple-tying-method-for-overlapping-finite-element-meshes-in-de}
         }
 		
 		@inproceedings{pereverdieva2025con,
