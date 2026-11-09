@@ -622,7 +622,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 		
 		@inproceedings{boonstra2016con,
-            title={Super-Structure and Super-Structure Free Design Search Space Representations for a Building Spatial Design in Multi-Disciplinary Building Optimisation},
+            title={Super-Structure and Super-Structure Free Design Search Space Representations for a Building Spatial Design in Multi-Disciplinary Building Optimisation (BEST PAPER AWARD},
             author={Boonstra, Sjonnie and Van der Blom, Koen and Hofmeyer, Herm and Amor, Robert and Emmerich, Michael},
             year={2016},
             abstract={In multi-disciplinary building optimisation, solutions depend on the representation of the design search space, the latter being a collection of all solutions. This paper presents two design search space representations and discusses their advantages and disadvantages: The first, a super-structure approach, requires all possible solutions to be prescribed in a so-called superstructure. The second approach, super-structure free, uses dynamic data structures that offer freedom in the range of possible solutions. It is concluded that both approaches may supplement each other, if applied in a combination of optimisation methods. A method for this combination of optimisation methods is proposed. The method includes the transformation of one representation into the other and vice versa. Finally, therefore in this paper these transformations are proposed, implemented, and verified as well.},
@@ -796,11 +796,28 @@ document.addEventListener("DOMContentLoaded", function() {
             title={Building Spatial Design Simulation and Optimisation with Structural and Daylight Objectives},
             author={Ezendam, Tessa and Van den Hoeven, Quimara and Hofmeyer, Herm and Aarts, Mariëlle},
             year={2025},
-            abstract={ The inevitable interdependencies and trade-offs between structural and daylight disciplines are rarely researched in multi-disciplinary design simulation and optimisation. As such, this paper presents a development of simulations of co-evolutionary design processes used for optimisation. The simulations entail an iterative process to delete or split spaces of a Building Spatial Design (BSD) according to its structural or daylight performance. Three types of co-evolutionary processes are investigated, i.e. (i) spatial-structural; (ii) spatial-daylight; and (iii) alternately (i) and (ii). Besides, an academic case study is carried out, where a variety of window sizes is considered while performing structural and daylight simulations. As a result, the general tendencies for structural and daylight objectives,their trade-offs, and the conflicts between optimising for structural or daylight performance are showcased. Furthermore, it is noted that co-evolutionary design simulations, if used for optimisation, show large improvements in just a few iterations.},
+            abstract={The inevitable interdependencies and trade-offs between structural and daylight disciplines are rarely researched in multi-disciplinary design simulation and optimisation. As such, this paper presents a development of simulations of co-evolutionary design processes used for optimisation. The simulations entail an iterative process to delete or split spaces of a Building Spatial Design (BSD) according to its structural or daylight performance. Three types of co-evolutionary processes are investigated, i.e. (i) spatial-structural; (ii) spatial-daylight; and (iii) alternately (i) and (ii). Besides, an academic case study is carried out, where a variety of window sizes is considered while performing structural and daylight simulations. As a result, the general tendencies for structural and daylight objectives,their trade-offs, and the conflicts between optimising for structural or daylight performance are showcased. Furthermore, it is noted that co-evolutionary design simulations, if used for optimisation, show large improvements in just a few iterations.},
 			note={EG-ICE 2025, Glasgow, United Kingdom},
             link={https://research.tue.nl/nl/publications/building-spatial-design-simulation-and-optimisation-with-structur}
         }
-		
+
+		@inproceedings{pereverdieva2026con,
+            title={Pareto Optimization of Non-orthogonal Building Spatial Designs for Thermal and Structural Performance},
+            author={Pereverdieva, Ksenia and Deutz, André and Ezendam, Tessa and Bäck, Thomas and Hofmeyer, Herm and Emmerich, Michael},
+            year={2026},
+            abstract={Multi-objective optimization has a wide range of applications across engineering and design. In this work, we address non-orthogonal Building Spatial Design (BSD) optimization using the evolutionary algorithm NSGA-II, which has demonstrated strong performance in many optimization tasks. For representing building layouts, we employ the Prism-net representation, which is suited to capturing both thermal and structural characteristics in BSD. We initially adopted a previously proposed mutation operator that follows established guidelines for representation and operator design in metric-based evolutionary algorithms. However, we identified limitations for this operator that hindered effective exploration of the design space. Therefore, we propose an alternative delete-and-split mutation operator specifically tailored to BSD. Comparative experiments demonstrate that our mutation operator discovers better distributed and more diverse Pareto-optimal solutions. Because high-fidelity simulations in real-world building design are computationally expensive, we further introduce a low-fidelity surrogate model based on rule-of-the-thumb engineering calculations. Within a multi-model optimization framework, this low-fidelity model accelerates the early search process, enabling effective exploration of the design space and the generation of promising near–Pareto optimal solutions. These solutions can subsequently be refined using high-fidelity simulations during the detailed engineering stages.},
+			note={EUROGEN 2025, Lathi, Finland},
+            link={https://research.tue.nl/p/en/research-outputs/pareto-optimization-of-non-orthogonal-building-spatial-designs-fo}
+        }
+
+		@inproceedings{hofmeyer2026con,
+            title={Structural Design Computing: Human, Human-AI, and Full-AI Co-Evolutionary Building Design (BEST PAPER AWARD, IN PRESS)},
+            author={Hofmeyer, Herm and Turkstra, Jelmer and Pauwels, Pieter},
+            year={2026},
+            abstract={In the built environment, increasing complexity and numerous challenges, e.g. with respect to sustainability, necessitate understanding and support of the related co-evolutionary design processes. Therefore, in this paper, a design studio experiment is presented to compare the artefacts (spatial-structural building designs) and the design process itself of co-evolutionary design by human, human-AI, and full-AI approaches. Results show that (a) product and process metrics provide information on the usefulness of AI applications in design systems, also distinguishing between effects due to AI and due to co-evolutionary interaction; (b) Human-AI activities lead to a larger design space explored than only human or full-AI processes; (c) The effectiveness of AI depends on the complexity of the problem, the availability of the AI rationale, and the workload of human processing of AI results; (d) The acceptation of AI suggested design variants may be related to co-evolutionary interaction, but not systematically.},
+			note={DCC'26, Paris, France},
+            link={https://research.tue.nl/p/en/research-outputs/structural-design-computing-human-human-ai-and-full-ai-co-evoluti}
+        }
     `;
 	
 
