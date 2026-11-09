@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			link={https://ieeexplore.ieee.org/document/11218863}
         }			
 		@article{ezendam2025,
-            title={Handling complex building geometries for disciplinary processing in conceptual building design simulation and optimization (SUBMITTED)},
+            title={Handling complex building geometries for disciplinary processing in conceptual building design simulation and optimization (IN PRESS)},
             author={Ezendam, Tessa and Hofmeyer, Herm and Van der Wal, Sanne and Pereverdieva, Ksenia and Emmerich, Michael},
             journal={ASCE Journal of Computing in Civil Engineering},
             volume={},
