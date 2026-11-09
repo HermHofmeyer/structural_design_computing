@@ -622,7 +622,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 		
 		@inproceedings{boonstra2016con,
-            title={Super-Structure and Super-Structure Free Design Search Space Representations for a Building Spatial Design in Multi-Disciplinary Building Optimisation (BEST PAPER AWARD},
+            title={Super-Structure and Super-Structure Free Design Search Space Representations for a Building Spatial Design in Multi-Disciplinary Building Optimisation (BEST PAPER AWARD)},
             author={Boonstra, Sjonnie and Van der Blom, Koen and Hofmeyer, Herm and Amor, Robert and Emmerich, Michael},
             year={2016},
             abstract={In multi-disciplinary building optimisation, solutions depend on the representation of the design search space, the latter being a collection of all solutions. This paper presents two design search space representations and discusses their advantages and disadvantages: The first, a super-structure approach, requires all possible solutions to be prescribed in a so-called superstructure. The second approach, super-structure free, uses dynamic data structures that offer freedom in the range of possible solutions. It is concluded that both approaches may supplement each other, if applied in a combination of optimisation methods. A method for this combination of optimisation methods is proposed. The method includes the transformation of one representation into the other and vice versa. Finally, therefore in this paper these transformations are proposed, implemented, and verified as well.},
